@@ -1,0 +1,97 @@
+.app-container {
+  background-color: #333;
+}
+
+.wrapper {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.color-0 {
+  background-color: #F24E4E;
+}
+
+.color-1 {
+  background-color: #F78145;
+}
+
+.color-2 {
+  background-color: #F2C94E;
+}
+
+.color-3 {
+  background-color: #A0B046;
+}
+
+.color-4 {
+  background-color: #4DBCE9;
+}
+
+.color-5 {
+  background-color: #1693A5;
+}
+
+.color-6 {
+  background-color: #A27FCD;
+}
+
+.weekdays {
+  display: flex;
+  align-items: stretch;
+}
+
+.weekday-title {
+  color: white;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+
+.weekday-title label:after {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.weekday-title.color-0 label:after {
+  content: "日";
+}
+
+.weekday-title.color-1 label:after {
+  content: "月";
+}
+
+.weekday-title.color-2 label:after {
+  content: "火";
+}
+
+.weekday-title.color-3 label:after {
+  content: "水";
+}
+
+.weekday-title.color-4 label:after {
+  content: "木";
+}
+
+.weekday-title.color-5 label:after {
+  content: "金";
+}
+
+.weekday-title.color-6 label:after {
+  content: "土";
+}
+
+.animes {
+  background-color: #FCFCFC;
+  overflow-y: scroll;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" ng-app="bangumi" ng-controller="BangumiController">
+<html lang="zh-CN">
 
 <head>
   <meta charset="utf-8">
@@ -15,12 +15,75 @@
 
 <body>
 
-  <div class="container">
-    <i class="fa fa-times"></i>
+  <div class="app-container" ng-app="bangumi" ng-controller="BangumiController">
+    <div class="wrapper">
+      <ul class="weekdays">
+        <li ng-repeat="(weekday, animes) in animeList | groupBy: 'weekday'">
+          <div class="weekday-title" ng-class="getWeekdayClass(weekday)">
+            <div class="wrapper">
+              <label ng-bind="weekday | weekday"></label>
+            </div>
+          </div>
+          <ul class="animes">
+            <li ng-repeat="anime in animes">
+              <div class="basic-info">
+                <div class="wrapper">
+                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
+                  <label ng-bind="anime.name"></label>
+                </div>
+              </div>
+            </li>
+            <!--temp-->
+            <li ng-repeat="anime in animes">
+              <div class="basic-info">
+                <div class="wrapper">
+                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
+                  <label ng-bind="anime.name"></label>
+                </div>
+              </div>
+            </li>
+            <li ng-repeat="anime in animes">
+              <div class="basic-info">
+                <div class="wrapper">
+                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
+                  <label ng-bind="anime.name"></label>
+                </div>
+              </div>
+            </li>
+            <li ng-repeat="anime in animes">
+              <div class="basic-info">
+                <div class="wrapper">
+                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
+                  <label ng-bind="anime.name"></label>
+                </div>
+              </div>
+            </li>
+            <li ng-repeat="anime in animes">
+              <div class="basic-info">
+                <div class="wrapper">
+                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
+                  <label ng-bind="anime.name"></label>
+                </div>
+              </div>
+            </li>
+            <li ng-repeat="anime in animes">
+              <div class="basic-info">
+                <div class="wrapper">
+                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
+                  <label ng-bind="anime.name"></label>
+                </div>
+              </div>
+            </li>
+            <!--temp-->
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <script src="node_modules/angular/angular.min.js" />
-  <script src="assets/app.js" />
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-filter/dist/angular-filter.min.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 
 </html>
