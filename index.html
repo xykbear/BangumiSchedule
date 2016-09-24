@@ -18,7 +18,7 @@
   <div class="list-container">
     <div class="wrapper">
       <ul class="weekdays">
-        <li ng-repeat="(weekday, animes) in animeList |selectFavorite: searchFilter | groupBy: 'weekday'">
+        <li ng-repeat="(weekday, animes) in animeList |selectFilter: searchFilter | groupBy: 'weekday'">
           <ul class="animes">
             <li ng-repeat="anime in animes">
               <div class="anime-info" ng-style="getImageStyle(anime.image)" ng-src="anime.image">
@@ -26,6 +26,7 @@
                   <label ng-bind="anime.name"></label>
                   <p ng-bind="anime.description"></p>
                   <i class="fa" ng-class="getHeartClass(anime)" ng-click="toggleFavorite(anime)"></i>
+                  <a class="fa fa-link" ng-href="{{anime.link}}" target="_blank"></a>
                 </div>
               </div>
             </li>
@@ -38,7 +39,7 @@
   <div class="title-container">
     <div class="wrapper">
       <ul class="weekdays">
-        <li ng-repeat="(weekday, animes) in animeList |selectFavorite: searchFilter | groupBy: 'weekday'">
+        <li ng-repeat="(weekday, animes) in animeList |selectFilter: searchFilter | groupBy: 'weekday'">
           <div class="weekday-title" ng-class="getWeekdayClass(weekday)">
             <div class="wrapper">
               <label ng-bind="weekday | weekday"></label>
@@ -52,13 +53,22 @@
   <div class="filter-container">
     <div class="wrapper">
       <ul class="left-list">
+        <li class="cookie-info">
+          <span>Cookie使用申明</span>
+          <div class="cookie-text">
+            本页面使用Cookie用于保存使用者关注的动画番组信息，且不存储、收集或使用任何其他数据。
+          </div>
+        </li>
+      </ul>
+      <ul class="right-list">
         <li>
           <input type="checkbox" id="filterFavorite" ng-model="searchFilter.isFavorite">
           <label for="filterFavorite">仅显示已关注</label>
         </li>
-      </ul>
-      <ul class="right-list">
-
+        <li>
+          <input type="checkbox" id="filterOnAir" ng-model="searchFilter.onAir">
+          <label for="filterOnAir">仅显示播送中</label>
+        </li>
       </ul>
     </div>
   </div>

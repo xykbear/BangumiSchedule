@@ -1,19 +1,22 @@
 (function() {
   'use strict';
 
+  var now = new Date();
+
   angular.module("bangumi", ['ngCookies', 'angular.filter'])
 
-  .controller('BangumiController', function($scope, $http, $cookies) {
+  .controller('BangumiController', function($scope, $http, $cookies, $filter) {
     // initialize
-    var favoriteKey = 'favoriteAnime';
+    var cookieKey = 'favoriteAnime';
 
     $scope.animeList = [];
 
     $scope.searchFilter = {
-      isFavorite: null
+      isFavorite: false,
+      onAir: false
     };
 
-    $scope.favoriteList = $cookies.getObject(favoriteKey);
+    $scope.favoriteList = $cookies.getObject(cookieKey);
 
     if (!$scope.favoriteList) {
       $scope.favoriteList = [];
@@ -22,13 +25,21 @@
     $http.get('list.json').then(function(response) {
       return response.data;
     }).then(function(data) {
+      //filter outdated data
+      return data.filter(function(item) {
+        return now < new Date(item.endDate);
+      });
+    }).then(function(data) {
+      var favoriteList = [];
       angular.forEach(data, function(item) {
         if ($scope.favoriteList.indexOf(item.key) > -1) {
+          favoriteList.push(item.key); //filter outdated data
           item.isFavorite = true;
         } else {
           item.isFavorite = false;
         }
       });
+      updateCookie(favoriteList);
       $scope.animeList = data;
     });
 
@@ -60,11 +71,26 @@
       } else {
         $scope.favoriteList.push(anime.key);
       }
-      $cookies.putObject(favoriteKey, $scope.favoriteList);
+      updateCookie();
       anime.isFavorite = !anime.isFavorite;
     };
 
+    // watch & event
+    $scope.$watchCollection(function(scope) {
+      return scope.favoriteList;
+    }, function(value) {
+      if (value.length === 0) {
+        $scope.searchFilter.isFavorite = false;
+      }
+    });
+
     // private functions
+    function updateCookie(favoriteList) {
+      if (favoriteList) {
+        $scope.favoriteList = favoriteList;
+      }
+      $cookies.putObject(cookieKey, $scope.favoriteList);
+    }
   })
 
   .filter('weekday', function() {
@@ -82,15 +108,12 @@
     };
   })
 
-  .filter('selectFavorite', function() {
+  .filter('selectFilter', function() {
     return function(list, filter) {
-      if (filter.isFavorite) {
-        return list.filter(function(item) {
-          return angular.equals(item.isFavorite, filter.isFavorite);
-        });
-      } else {
-        return list;
-      }
+      return list.filter(function(item) {
+        return (filter.onAir && now > new Date(item.startDate) || !filter.onAir) &&
+          (filter.isFavorite && angular.equals(item.isFavorite, true) || !filter.isFavorite);
+      });
     };
   });
 
