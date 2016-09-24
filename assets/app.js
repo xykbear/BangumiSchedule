@@ -9,6 +9,10 @@
 
     $scope.animeList = [];
 
+    $scope.searchFilter = {
+      isFavorite: null
+    };
+
     $scope.favoriteList = $cookies.getObject(favoriteKey);
 
     if (!$scope.favoriteList) {
@@ -75,6 +79,18 @@
         '星期六'
       ];
       return weekday[value];
+    };
+  })
+
+  .filter('selectFavorite', function() {
+    return function(list, filter) {
+      if (filter.isFavorite) {
+        return list.filter(function(item) {
+          return angular.equals(item.isFavorite, filter.isFavorite);
+        });
+      } else {
+        return list;
+      }
     };
   });
 

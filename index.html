@@ -18,12 +18,7 @@
   <div class="list-container">
     <div class="wrapper">
       <ul class="weekdays">
-        <li ng-repeat="(weekday, animes) in animeList | groupBy: 'weekday'">
-          <div class="weekday-title" ng-class="getWeekdayClass(weekday)">
-            <div class="wrapper">
-              <label ng-bind="weekday | weekday"></label>
-            </div>
-          </div>
+        <li ng-repeat="(weekday, animes) in animeList |selectFavorite: searchFilter | groupBy: 'weekday'">
           <ul class="animes">
             <li ng-repeat="anime in animes">
               <div class="anime-info" ng-style="getImageStyle(anime.image)" ng-src="anime.image">
@@ -36,6 +31,34 @@
             </li>
           </ul>
         </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="title-container">
+    <div class="wrapper">
+      <ul class="weekdays">
+        <li ng-repeat="(weekday, animes) in animeList |selectFavorite: searchFilter | groupBy: 'weekday'">
+          <div class="weekday-title" ng-class="getWeekdayClass(weekday)">
+            <div class="wrapper">
+              <label ng-bind="weekday | weekday"></label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="filter-container">
+    <div class="wrapper">
+      <ul class="left-list">
+        <li>
+          <input type="checkbox" id="filterFavorite" ng-model="searchFilter.isFavorite">
+          <label for="filterFavorite">仅显示已关注</label>
+        </li>
+      </ul>
+      <ul class="right-list">
+
       </ul>
     </div>
   </div>
