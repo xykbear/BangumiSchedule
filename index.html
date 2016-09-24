@@ -30,7 +30,7 @@
                 <div class="wrapper">
                   <label ng-bind="anime.name"></label>
                   <p ng-bind="anime.description"></p>
-                  <i class="fa" ng-class="getHeartClass(anime)" ng-click="anime.isFav=! anime.isFav"></i>
+                  <i class="fa" ng-class="getHeartClass(anime)" ng-click="toggleFavorite(anime)"></i>
                 </div>
               </div>
             </li>
@@ -41,6 +41,7 @@
   </div>
 
   <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
   <script src="node_modules/angular-filter/dist/angular-filter.min.js"></script>
   <script src="assets/app.js"></script>
 </body>
