@@ -13,9 +13,9 @@
 
 </head>
 
-<body>
+<body ng-app="bangumi" ng-controller="BangumiController">
 
-  <div class="app-container" ng-app="bangumi" ng-controller="BangumiController">
+  <div class="list-container">
     <div class="wrapper">
       <ul class="weekdays">
         <li ng-repeat="(weekday, animes) in animeList | groupBy: 'weekday'">
@@ -26,55 +26,14 @@
           </div>
           <ul class="animes">
             <li ng-repeat="anime in animes">
-              <div class="basic-info">
+              <div class="anime-info" ng-style="getImageStyle(anime.image)" ng-src="anime.image">
                 <div class="wrapper">
-                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
                   <label ng-bind="anime.name"></label>
+                  <p ng-bind="anime.description"></p>
+                  <i class="fa" ng-class="getHeartClass(anime)" ng-click="anime.isFav=! anime.isFav"></i>
                 </div>
               </div>
             </li>
-            <!--temp-->
-            <li ng-repeat="anime in animes">
-              <div class="basic-info">
-                <div class="wrapper">
-                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
-                  <label ng-bind="anime.name"></label>
-                </div>
-              </div>
-            </li>
-            <li ng-repeat="anime in animes">
-              <div class="basic-info">
-                <div class="wrapper">
-                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
-                  <label ng-bind="anime.name"></label>
-                </div>
-              </div>
-            </li>
-            <li ng-repeat="anime in animes">
-              <div class="basic-info">
-                <div class="wrapper">
-                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
-                  <label ng-bind="anime.name"></label>
-                </div>
-              </div>
-            </li>
-            <li ng-repeat="anime in animes">
-              <div class="basic-info">
-                <div class="wrapper">
-                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
-                  <label ng-bind="anime.name"></label>
-                </div>
-              </div>
-            </li>
-            <li ng-repeat="anime in animes">
-              <div class="basic-info">
-                <div class="wrapper">
-                  <img ng-src="{{anime.image}}" alt="{{anime.name}}">
-                  <label ng-bind="anime.name"></label>
-                </div>
-              </div>
-            </li>
-            <!--temp-->
           </ul>
         </li>
       </ul>

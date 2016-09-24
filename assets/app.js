@@ -18,6 +18,19 @@
       return ret;
     };
 
+    $scope.getImageStyle = function(path) {
+      return {
+        'background-image': 'url(' + path + ')'
+      };
+    };
+
+    $scope.getHeartClass = function(anime) {
+      return {
+        'fa-heart-o': !anime.isFav,
+        'fa-heart': anime.isFav
+      };
+    };
+
     // private functions
   })
 

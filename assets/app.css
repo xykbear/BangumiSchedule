@@ -1,5 +1,12 @@
-.app-container {
+body {
+  line-height: 1em;
   background-color: #333;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .wrapper {
@@ -7,12 +14,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .color-0 {
@@ -48,19 +49,33 @@ ul {
   align-items: stretch;
 }
 
+.weekdays li {
+  flex: 1;
+}
+
 .weekday-title {
   color: white;
-  padding: 20px 10px;
+  padding: 1.5em 0;
   overflow: hidden;
+  position: fixed;
+  width: calc(100% / 7);
+  z-index: 999;
+}
+
+.weekday-title label {
+  line-height: 1em;
+  margin-left: 1em;
+  text-shadow: 0 0 2px #000;
 }
 
 .weekday-title label:after {
   color: rgba(255, 255, 255, 0.2);
+  text-shadow: none;
   font-size: 3em;
   font-weight: bold;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -5px;
+  top: 15px;
 }
 
 .weekday-title.color-0 label:after {
@@ -92,6 +107,64 @@ ul {
 }
 
 .animes {
-  background-color: #FCFCFC;
-  overflow-y: scroll;
+  margin-top: 4em;
+}
+
+.anime-info {
+  height: 10em;
+  overflow: hidden;
+  background-position: 50% 25%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  border: 1px solid #111;
+  color: white;
+  background-color: black;
+  transition: height 200ms ease-out;
+}
+
+.anime-info:hover {
+  height: 20em;
+  transition: height 200ms ease-out;
+}
+
+.anime-info label {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  padding: 1em 0.5em;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 200ms ease-out;
+}
+
+.anime-info:hover label {
+  bottom: 2em;
+  opacity: 0;
+  transition: all 200ms ease-out;
+}
+
+.anime-info p {
+  opacity: 0;
+  margin: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1em;
+  padding-top: 3em;
+  transition: opacity 200ms ease-out;
+}
+
+.anime-info:hover p {
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+}
+
+.anime-info .fa {
+  position: absolute;
+  top: 1em;
+  right: 0.5em;
+}
+
+.anime-info .fa-heart {
+  color: #F24E4E;
 }
