@@ -1,73 +1,76 @@
-[{
-  "key": "201610.1",
-  "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
-  "weekday": 0,
-  "startDate": "2016-10-02",
-  "endDate": "2017-01-01",
-  "description": "机动战士高达 铁血的孤儿 第二季",
-  "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
-  "link": "#"
-}, {
-  "key": "201610.2",
-  "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
-  "weekday": 1,
-  "startDate": "2016-10-02",
-  "endDate": "2017-01-01",
-  "description": "机动战士高达 铁血的孤儿 第二季",
-  "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
-  "link": "#"
-}, {
-  "key": "201610.3",
-  "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
-  "weekday": 2,
-  "startDate": "2016-10-02",
-  "endDate": "2017-01-01",
-  "description": "机动战士高达 铁血的孤儿 第二季",
-  "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
-  "link": "#"
-}, {
-  "key": "201610.4",
-  "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
-  "weekday": 3,
-  "startDate": "2016-10-02",
-  "endDate": "2017-01-01",
-  "description": "机动战士高达 铁血的孤儿 第二季",
-  "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
-  "link": "#"
-}, {
-  "key": "201610.5",
-  "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
-  "weekday": 4,
-  "startDate": "2016-10-02",
-  "endDate": "2017-01-01",
-  "description": "机动战士高达 铁血的孤儿 第二季",
-  "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
-  "link": "#"
-}, {
-  "key": "201610.6",
-  "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
-  "weekday": 5,
-  "startDate": "2016-10-02",
-  "endDate": "2017-01-01",
-  "description": "机动战士高达 铁血的孤儿 第二季",
-  "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
-  "link": "#"
-}, {
-  "key": "201610.7",
-  "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
-  "weekday": 6,
-  "startDate": "2016-10-02",
-  "endDate": "2017-01-01",
-  "description": "机动战士高达 铁血的孤儿 第二季",
-  "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
-  "link": "#"
-}, {
-  "key": "201610.8",
-  "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
-  "weekday": 0,
-  "startDate": "2016-10-02",
-  "endDate": "2017-01-01",
-  "description": "机动战士高达 铁血的孤儿 第二季",
-  "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
-  "link": "#"
-}]
+{
+  "lastUpdate": "2016-09-25",
+  "list": [{
+    "key": "201610.1",
+    "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
+    "weekday": 0,
+    "startDate": "2016-10-02",
+    "endDate": "2017-01-01",
+    "description": "机动战士高达 铁血的孤儿 第二季",
+    "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
+    "link": "#"
+  }, {
+    "key": "201610.2",
+    "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
+    "weekday": 1,
+    "startDate": "2016-10-02",
+    "endDate": "2017-01-01",
+    "description": "机动战士高达 铁血的孤儿 第二季",
+    "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
+    "link": "#"
+  }, {
+    "key": "201610.3",
+    "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
+    "weekday": 2,
+    "startDate": "2016-10-02",
+    "endDate": "2017-01-01",
+    "description": "机动战士高达 铁血的孤儿 第二季",
+    "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
+    "link": "#"
+  }, {
+    "key": "201610.4",
+    "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
+    "weekday": 3,
+    "startDate": "2016-10-02",
+    "endDate": "2017-01-01",
+    "description": "机动战士高达 铁血的孤儿 第二季",
+    "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
+    "link": "#"
+  }, {
+    "key": "201610.5",
+    "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
+    "weekday": 4,
+    "startDate": "2016-10-02",
+    "endDate": "2017-01-01",
+    "description": "机动战士高达 铁血的孤儿 第二季",
+    "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
+    "link": "#"
+  }, {
+    "key": "201610.6",
+    "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
+    "weekday": 5,
+    "startDate": "2016-10-02",
+    "endDate": "2017-01-01",
+    "description": "机动战士高达 铁血的孤儿 第二季",
+    "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
+    "link": "#"
+  }, {
+    "key": "201610.7",
+    "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
+    "weekday": 6,
+    "startDate": "2016-10-02",
+    "endDate": "2017-01-01",
+    "description": "机动战士高达 铁血的孤儿 第二季",
+    "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
+    "link": "#"
+  }, {
+    "key": "201610.8",
+    "name": "機動戦士ガンダム 鉄血のオルフェンズ 2nd season",
+    "weekday": 0,
+    "startDate": "2016-10-02",
+    "endDate": "2017-01-01",
+    "description": "机动战士高达 铁血的孤儿 第二季",
+    "image": "http://lain.bgm.tv/pic/cover/c/97/af/170191_p02N2.jpg",
+    "link": "#"
+  }]
+}

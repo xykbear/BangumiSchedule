@@ -9,6 +9,8 @@
     // initialize
     var cookieKey = 'favoriteAnime';
 
+    $scope.lastUpdate = '';
+
     $scope.animeList = [];
 
     $scope.searchFilter = {
@@ -25,8 +27,9 @@
     $http.get('list.json').then(function(response) {
       return response.data;
     }).then(function(data) {
+      $scope.lastUpdate = "最近更新: " + data.lastUpdate;
       //filter outdated data
-      return data.filter(function(item) {
+      return data.list.filter(function(item) {
         return now < new Date(item.endDate);
       });
     }).then(function(data) {

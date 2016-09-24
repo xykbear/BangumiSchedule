@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title ng-bind="pageTitle">Bangumi</title>
+  <title ng-bind="pageTitle">番组日程表</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
@@ -53,12 +53,14 @@
   <div class="filter-container">
     <div class="wrapper">
       <ul class="left-list">
+        <li>@XYKbear</li>
         <li class="cookie-info">
-          <span>Cookie使用申明</span>
+          <span>Cookie使用声明</span>
           <div class="cookie-text">
             本页面使用Cookie用于保存使用者关注的动画番组信息，且不存储、收集或使用任何其他数据。
           </div>
         </li>
+        <li ng-bind="lastUpdate"></li>
       </ul>
       <ul class="right-list">
         <li>

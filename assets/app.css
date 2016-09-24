@@ -46,6 +46,7 @@ ul {
 
 .list-container {
   padding-top: 4em;
+  padding-bottom: 2.5em;
 }
 
 .title-container {
@@ -138,7 +139,6 @@ ul {
   position: absolute;
   bottom: 0;
   width: 100%;
-  text-align: center;
   display: block;
   padding: 0.5em 0;
   background-color: rgba(0, 0, 0, 0.8);
@@ -187,8 +187,8 @@ ul {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 2em;
-  line-height: 2em;
+  font-size: 0.75em;
+  padding: 1em 0;
   background-color: black;
   color: #FFF;
 }
@@ -201,6 +201,7 @@ ul {
 .left-list {
   float: left;
   padding-left: 1em;
+  color: #999;
 }
 
 .right-list {
@@ -213,7 +214,7 @@ ul {
   bottom: 2em;
   width: 16em;
   padding: 0.5em;
-  color: black;
+  color: #333;
   background-color: #F2C94E;
   border: 1px solid #C2991E;
 }
