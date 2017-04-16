@@ -1,18 +1,13 @@
 {
-  "name": "angular-seed-es6",
-  "version": "0.0.1",
-  "description": "Seed project for angular 1.x apps using best practices and es6",
-  "homepage": "https://github.com/gusgard/angular-seed-es6#readme",
-  "author": "Gustavo Gard",
-  "keywords": [
-    "angular",
-    "es6",
-    "angular-seed",
-    "template"
-  ],
+  "name": "bangumi-schedule",
+  "version": "0.0.2",
+  "description": "bangumi schedule version 2",
+  "homepage": "https://github.com/xykbear/BangumiSchedule",
+  "author": "XYKbear",
+  "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gusgard/angular-seed-es6.git"
+    "url": "git+https://github.com/xykbear/BangumiSchedule.git"
   },
   "license": "MIT",
   "scripts": {
@@ -20,13 +15,7 @@
     "build": "gulp build",
     "test": "gulp test"
   },
-  "dependencies": {
-    "angular": "^1.5.2",
-    "angular-animate": "^1.5.7",
-    "angular-aria": "^1.5.7",
-    "angular-material": "^1.1.0-rc.5",
-    "angular-ui-router": "^0.3.1"
-  },
+  "dependencies": { },
   "devDependencies": {
     "babel-core": "^6.7.2",
     "babel-eslint": "^6.1.0",
@@ -59,6 +48,6 @@
     "watchify": "^3.7.0"
   },
   "bugs": {
-    "url": "https://github.com/gusgard/angular-seed-es6/issues"
+    "url": "https://github.com/xykbear/BangumiSchedule/issues"
   }
 }

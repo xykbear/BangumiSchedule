@@ -20,7 +20,8 @@ let isProd = false;
 let plugins = gulpLoadPlugins();
 
 const DIRS = {
-  src: 'app',
+  src: 'src',
+  assets: 'assets',
   dest: 'build',
   js: { app: 'js/app.js', libs: 'js/libs.js' }
 };
@@ -38,9 +39,9 @@ const CSS_DEPENDENCIES = [
 ];
 
 const PATHS = {
-  sass: [`${DIRS.src}/scss/*.scss`, `${DIRS.src}/scss/**/*.scss`],
-  js: [`${DIRS.src}/js/*.js`, `${DIRS.src}/js/**/*.js`],
-  html: [`${DIRS.src}/templates/*.html`, `${DIRS.src}/templates/**/*.html`]
+  sass: [`${DIRS.src}/**/*.scss`],
+  js: [`${DIRS.src}/*.js`, `${DIRS.src}/**/*.js`],
+  html: [`${DIRS.src}/index.html`, `${DIRS.src}/**/*.tpl.html`]
 };
 
 // Handle sass changes.
@@ -74,7 +75,7 @@ gulp.task('html', () => {
 
 // Handle assets changes.
 gulp.task('assets', () => {
-  return gulp.src(`${DIRS.src}/assets/*`)
+  return gulp.src(`${DIRS.assets}/*`)
     .pipe(gulp.dest(`${DIRS.dest}/assets`));
 });
 
